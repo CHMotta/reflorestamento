@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
-    <main>
-        <h1>Login</h1>
-        <form action="">
-            <p>
-            <label for="">Usuario</label>
-            <input type="text">
-        </p>
-            <p>
-            <label for="">Senha</label>
-            <input type="text">
-        </p>
-            <p>
-            <label for="">Confirmação de senha</label>
-            <input type="text">
-        </p>
-        <button>Enviar</button>
-        </form>
+    <main id="main-login">
+        <div id="login">
+            <h1>Login</h1>
+            <form class="form-login">
+                <div class = form-grupo>
+                    <label for="usuario">Usuario</label>
+                    <input type="text" id="usuario" name="usuario" required>
+                </div>
+                <div class = form-grupo>
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" required>
+                </div>
+                <div class = form-grupo>
+                    <label for="arvore">Escolha uma arvore</label>
+                    <div class="arvore-selecao">
+                        <label class="arvore-item">
+                            <input type="radio" name="'arvore" value="pau-brasil">
+                            <img src="imagens/pau-brasil.jpg" alt="imagem_pau_brasil">
+                            <p>Pau-Blabelrasil</p>
+                        </label>
+                        <label class="arvore-item">
+                            <input type="radio" name="'arvore" value="peroba-rosa" required>
+                            <img src="imagens/peroba-rosa.jpg" alt="imagem_peroba_rosa">
+                            <p>Peroba rosa</p>
+                        </label>
+                        <label class="arvore-item">
+                            <input type="radio" name="'arvore" value="castanheira">
+                            <img src="imagens/castanheira.jpg" alt="imagem_castanheira">
+                            <p>Castanheira</p>
+                        </label>
+                    </div>
+                </div>
+                        
+                <button type="submit" id="btn-login">Enviar</button>
+            </form>
+        </div>
     </main>
 </body>
+<script src=""></script>
 </html>

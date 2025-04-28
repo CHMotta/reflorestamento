@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, Helvetica, sans-serif, 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
+}
+
+body{
+    background-image: url(imagens/imagem-fundo.jpg);
+    background-color: white;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#main-login{
+    background-color: #fafafa;
+    text-align: center;
+    width: 40%;
+    max-width: 900px;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px;
+}
+
+#main-login img{
+    width: 50%;
+    object-fit: cover;
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+.form-login{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-grupo{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.arvore-selecao{
+    display: flex;
+    flex-direction: row;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+    margin: 10px;
+    width: 300px;
+    align-self: center;
+}
+
+input:focus {
+    outline: none;
+    border-color: #321816; 
+    /*cuida do foco ao clicar nos inputs destacando eles*/
+}
+
+#btn-login{
+    border-radius: 8px;
+    margin: 10px;
+    width: 200px;
+    align-self: center;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.arvore-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+.arvore-item input[type="radio"]{
+    opacity: 0;
+    position: absolute;
+}
+
+.arvore-item input[value="pau-brasil"]:checked + img{
+    border: 3px solid rgba(255, 0, 0, 0.5);
+    border-radius: 100px;
+}
+
+.arvore-item input[value="peroba-rosa"]:checked + img{
+    border: 3px solid rgba(240, 67, 240, 0.5);
+    border-radius: 100px;
+}
+
+.arvore-item input[value="castanheira"]:checked + img{
+    border: 3px solid hsla(0, 71%, 14%, 0.5);
+    border-radius: 100px;
+}
+
+
