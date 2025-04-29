@@ -33,7 +33,7 @@ body{
 }
 
 .tema-castanheira{
-    --cor-texto-principal: #bfcd04f5;
+    --cor-texto-principal: #594126;
     --imagem-fundo: url(imagens/fundo-castanheira.jpg);
 }
 
@@ -131,7 +131,7 @@ input:focus {
 }
 
 .arvore-item input[value="tema-castanheira"]:checked + img{
-    border: 3px solid #bfcd04f5;
+    border: 3px solid #594126;
     border-radius: 100px;
 }
 
