@@ -23,12 +23,12 @@ body{
 }
 
 .tema-pau-brasil{
-    --cor-texto-principal: #c70e0e9b;
+    --cor-texto-principal: #c70e0ed1;
     --imagem-fundo: url(imagens/fundo-pau-brasil.jpg);
 }
 
 .tema-peroba-rosa{
-    --cor-texto-principal: #d47a9e;
+    --cor-texto-principal: #d47a9ee1;
     --imagem-fundo: url(imagens/fundo-peroba-rosa.jpg);
 }
 
@@ -120,17 +120,17 @@ input:focus {
     position: absolute;
 }
 
-.arvore-item input[value="pau-brasil"]:checked + img{
+.arvore-item input[value="tema-pau-brasil"]:checked + img{
     border: 3px solid #c70e0e9b;
     border-radius: 100px;
 }
 
-.arvore-item input[value="peroba-rosa"]:checked + img{
+.arvore-item input[value="tema-peroba-rosa"]:checked + img{
     border: 3px solid #d47a9e;
     border-radius: 100px;
 }
 
-.arvore-item input[value="castanheira"]:checked + img{
+.arvore-item input[value="tema-castanheira"]:checked + img{
     border: 3px solid #bfcd04f5;
     border-radius: 100px;
 }
