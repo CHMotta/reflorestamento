@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de reflorestamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="main-registro">
+        <h1>Registro de Reflorestamento</h1>
+        <div class="info-registro">
+            <div id = div-registro>
+                <h2>Quantidade de arvores plantadas</h2>
+                <input type="number" placeholder="Ex:10" id="quantidade-Arvores">
+                <button class="btn-registro btn-padrao">Registrar</button>
+            </div>
+            <div class="form-arvore-resgitro">
+                <h2>Espécie de arvore plantada</h2>
+                <label class = "arvores-registro">
+                    <input type="radio" name="arvores-reflorestar" value="arvores-peroba-do-campo">
+                    <img src="imagens/imagens-registro/peroba-do-campo.jpg" alt="icone-arvore-peroba-do-campo" class="icone">
+                    <p>Peroba de campo</p>
+                </label>
+                <label class="arvores-registro">
+                    <input type="radio" name="arvores-reflorestar" value="arvores-jequitiba">
+                    <img src="imagens/imagens-registro/jequitiba.jpg" alt="icone-arvore-jequitiba" class="icone">
+                    <p>Jequitibás</p>
+                </label>
+                <label class="arvores-registro">
+                    <input type="radio" name="arvores-reflorestar" value="arvores-aroeira">
+                    <img src="imagens/imagens-registro/aroeira.jpg" alt="icone-arvore-aroeira" class="icone">
+                    <p>Aroeiras</p>
+                </label>
+                <label class="arvores-registro">
+                    <input type="radio" name="arvores-reflorestar" value="arvores-angico">
+                    <img src="imagens/imagens-registro/angico.jpg" alt="icone-arvore-angico" class="icone">
+                    <p>Angicos</p>
+                </label>
+                <label class = "arvores-registro">
+                    <input type="radio" name="arvores-reflorestar" value="arvores-ipe">
+                    <img src="imagens/imagens-registro/ipes.jpg" alt="icone-arvore-ipe" class="icone">
+                    <p>Ipês</p>
+                </label>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="app.js"></script>
+</html>
