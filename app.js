@@ -13,16 +13,13 @@ opcoesArvores.forEach(temaPadrao => {
     })
 })
 
-//funçaõ para não adicionar o tema salvo no localStorage na pagina de login quando abrir a pagina.
+//funçaõ para não adicionar o tema salvo do localStorage na pagina de login quando abrir a pagina.
 function aplicarTemaSalvo (){
-    if(!window.location.href.includes('/reflorestamento/login.html')){
+    if(!window.location.href.includes('/reflorestamento/index.html')){
     let temaPadrao = localStorage.getItem('tema');
-    if(temaPadrao){
-        document.body.classList.add(temaPadrao);
-    }
+    temaPadrao?document.body.classList.add(temaPadrao):null; //substitui um if
     }
 }
-
 
 if(btnLogin){
     btnLogin.addEventListener('click', () => {
@@ -33,20 +30,17 @@ if(btnLogin){
             alert('Preencha usuário e senha corretamente.');
             return;
         }
-        
+
         localStorage.setItem("usuario", usuario.value);
         localStorage.setItem("senha", senha.value);
-        localStorage
-        
+
         let usuarioObjeto = {
             usuario: usuario.value,
             senha: senha.value,
             tema: localStorage.getItem('tema')
         }
-        
-        let usuarioJSON = JSON.stringify(usuarioObjeto);
-        console.log(usuarioJSON)
-        
+        console.log(JSON.stringify(usuarioObjeto));
+
         window.location.href = "/reflorestamento/registros.html"
     });
 }
@@ -72,15 +66,14 @@ if(btnRegistro){
         }
 
         let registroReflorestamento = {
-            usuario: "",
-            quantArvores: quantArvores,
-            especieReflorestada: especieReflorestada
+            usuario: localStorage.getItem('usuario'),
+            quantArvores: quantArvores.value,
+            especieReflorestada: especieReflorestada.value
         }
-        let registroReflorestamentoObjeto = JSON.stringify(registroReflorestamento)
-        localStorage.setItem('registros', registroReflorestamento)
+        let registroReflorestamentoObjeto = JSON.stringify(registroReflorestamento);
+        localStorage.setItem('registros', registroReflorestamento);
         console.log(registroReflorestamento);
         console.log(registroReflorestamentoObjeto);
-
     })
 }
 
