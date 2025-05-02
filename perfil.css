@@ -1,0 +1,58 @@
+#main-perfil{
+    background-color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+    width: 90%;
+    height: 450px;
+    max-width: 900px;
+    display: grid;
+    grid-template-rows: 2fr 1.5fr 2fr;
+    gap: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px;
+
+    
+}
+
+
+#foto-perfil{
+    margin-top: 30px;
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+#usuario-foto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#area-digitar-bio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+#arvores-plantadas-bio{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#area-texto {
+    width: 500px;
+    height: 60%;
+    font-size:16px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--cor-texto-principal);;
+}
+
+#quantidade{
+    font-weight: bold;
+}

@@ -20,6 +20,7 @@ function aplicarTemaSalvo (){
     temaPadrao?document.body.classList.add(temaPadrao):null; //substitui um if
     }
 }
+aplicarTemaSalvo()
 
 if(btnLogin){
     btnLogin.addEventListener('click', () => {
@@ -45,12 +46,7 @@ if(btnLogin){
     });
 }
 
-aplicarTemaSalvo()
-
-
-
 let btnRegistro = document.querySelector('.btn-registro');
-
 if(btnRegistro){
     btnRegistro.addEventListener('click', () =>{
         let quantArvores = document.getElementById('quantidade-Arvores');
@@ -78,8 +74,56 @@ if(btnRegistro){
 }
 
 
+//não precisa fazer variavel para imagem, mas assim é melhor para código mais limpo e reutilizavel 
+let imgSemente = "imagens/semente.jpg";
+let imgBroto = "imagens/broto.jpg";
+let imgCastanheiraJovem = "imagens/castanheira-jovem.jpg";
+let imgPerobaRosaJovem = "imagens/peroba-rosa-jovem.jpg";
+let imgPauBrasilJovem = "imagens/pau-brasil-jovem.jpg";
+let imgCastanheiraAdulta ="imagens/castanheira.jpg" ;
+let imgPerobaRosaAdulta ="imagens/peroba-rosa.jpg";
+let imgPauBrasilAdulto ="imagens/pau-brasil.jpg";
 
+if(window.location.href.includes('/reflorestamento/perfil.html')){
+    document.getElementById('nomeUsuarioPerfil').innerHTML = localStorage.getItem('usuario')
+    let fotoPerfil = document.getElementById('foto-perfil');
+    let quantidadeArvoresPlantadas = 300;
 
-let listaDeReflorestamento = {
+    document.getElementById("quantidadeArvoresPlantadas").textContent = quantidadeArvoresPlantadas
+    document.getElementById('area-texto').value = localStorage.getItem('bio')
 
+    if(quantidadeArvoresPlantadas <= 100){
+        fotoPerfil.src = imgSemente;
+    }else if(quantidadeArvoresPlantadas <= 300){
+        fotoPerfil.src = imgBroto
+    }
+
+    if(localStorage.getItem('tema') == "tema-pau-brasil"){
+        if(quantidadeArvoresPlantadas > 300 &&  quantidadeArvoresPlantadas <= 700){
+            fotoPerfil.src = imgPauBrasilJovem;
+        }else if(quantidadeArvoresPlantadas >700){
+            fotoPerfil.src = imgPauBrasilAdulto;
+        }
+    }
+    if(localStorage.getItem('tema') == "tema-peroba-rosa"){
+        if(quantidadeArvoresPlantadas > 300 &&  quantidadeArvoresPlantadas <= 700){
+            fotoPerfil.src = imgPerobaRosaJovem;
+        }else if(quantidadeArvoresPlantadas >700){
+            fotoPerfil.src = imgPerobaRosaAdulta;
+        }
+    }
+    if(localStorage.getItem('tema') == "tema-castanheira"){
+        if(quantidadeArvoresPlantadas > 300 &&  quantidadeArvoresPlantadas <= 700){
+            fotoPerfil.src = imgCastanheiraJovem;
+        }else if(quantidadeArvoresPlantadas >700){
+            fotoPerfil.src = imgCastanheiraAdulta;
+        }
+    }
+    let btnSalvarBio = document.querySelector(".btn-salvar-bio");
+    if(btnSalvarBio){
+        btnSalvarBio.addEventListener('click', () =>{
+            let areaTexto = document.getElementById("area-texto");
+            localStorage.setItem('bio', areaTexto.value)
+        })
+    }
 }

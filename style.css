@@ -19,7 +19,8 @@ body{
     justify-content: center;
     color: var(--cor-texto-principal);
     background-size: 50%;
-
+    height: 80vh;
+    max-height: 600px;
 }
 
 .tema-pau-brasil{
@@ -46,7 +47,7 @@ body{
 }
 
 #main-login{
-    background-color: #fafafa;
+    background-color:rgba(255, 255, 255, 0.8);
     text-align: center;
     width: 40%;
     max-width: 900px;
@@ -79,6 +80,11 @@ h1{
 .arvore-selecao{
     display: flex;
     flex-direction: row;
+}
+
+.arvore-tema{
+    border-radius: 100px;
+    
 }
 
 label {
@@ -145,7 +151,7 @@ input:focus {
 /*Estilo especificos da pagina registro.html*/
 
 #main-registro{
-    background-color: #fafafa;
+    background-color:rgba(255, 255, 255, 0.8); 
     text-align: center;
     width: 90%;
     max-width: 900px;
