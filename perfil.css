@@ -10,8 +10,6 @@
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 0 20px;
-
-    
 }
 
 
@@ -21,6 +19,7 @@
     height: 90px;
     object-fit: cover;
     border-radius: 50%;
+    border: 2px solid var(--cor-texto-principal);;
 }
 
 
@@ -50,7 +49,7 @@
     height: 60%;
     font-size:16px;
     border-radius: 5px;
-    box-shadow: 0 0 10px var(--cor-texto-principal);;
+    box-shadow: 0 0 10px var(--cor-texto-principal);
 }
 
 #quantidade{

@@ -127,3 +127,48 @@ if(window.location.href.includes('/reflorestamento/perfil.html')){
         })
     }
 }
+
+if(window.location.href.includes("/reflorestamento/destaques.html")){
+    //recupera localStorage em json e converte para JS
+    const usuarios = JSON.parse(localStorage.getItem("usuariosDestaque"))
+    //serve para organizar um item dentro dos usuarios
+    usuarios.sort((a, b) => b.quantidadePlantada - a.quantidadePlantada);
+    //slice serve para copiar parte da array, no caso do indice zero (0) até ANTES do ultime indece (3)
+    let top3 = usuarios.slice(0, 3)
+
+    console.log(top3);
+
+    top3.forEach((usuario, index) => {
+        let imgUsuario = document.getElementById(`img-usuario${index + 1}`);
+        let nomeUsuario = document.getElementById(`usuario${index + 1}`);
+        nomeUsuario.textContent = usuario.nome;
+
+        if(usuario.quantidadeArvoresPlantadas <= 100){
+            imgUsuario.src = imgSemente;
+        }else if(usuario.quantidadeArvoresPlantadas <= 300){
+            imgUsuario.src = imgBroto
+        }
+        if (usuario.tema == "tema-pau-brasil"){
+            if(usuario.quantidadeArvoresPlantadas > 300 &&  usuario.quantidadeArvoresPlantadas <= 700){
+                imgUsuario.src = imgPauBrasilJovem;
+            }else if(usuario.quantidadeArvoresPlantadas >700){
+                imgUsuario.src = imgPauBrasilAdulto;
+            }
+        }
+        if(usuario.tema == "tema-peroba-rosa"){
+            if(usuario.quantidadeArvoresPlantadas > 300 &&  usuario.quantidadeArvoresPlantadas <= 700){
+                imgUsuario.src = imgPerobaRosaJovem;
+            }else if(usuario.quantidadeArvoresPlantadas >700){
+                imgUsuario.src = imgPerobaRosaAdulta;
+            }
+        }
+        if(usuario.tema == "tema-castanheira"){
+            if(usuario.quantidadeArvoresPlantadas > 300 &&  usuario.quantidadeArvoresPlantadas <= 700){
+                imgUsuario.src = imgCastanheiraJovem;
+            }else if(usuario.quantidadeArvoresPlantadas >700){
+                imgUsuario.src = imgCastanheiraAdulta;
+            }
+        }
+    })
+}
+//["tema-pau-brasil", "tema-peroba-rosa", "tema-castanheira"]

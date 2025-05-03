@@ -1,0 +1,39 @@
+#main-destaque{
+    background-color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+    width: 90%;
+    height: 450px;
+    max-width: 900px;
+    gap: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px;
+    
+}
+
+.div-destaques{
+    display: flex;
+    flex-direction: row;
+    height: 350px;
+}
+
+.destaques{
+    background-color: rgb(255, 255, 255);
+    margin: 30px;
+    border: 2px solid var(--cor-texto-principal);;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.icone-usuario {
+        margin-top: 30px;
+        width: 90px;
+        height: 90px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 2px solid var(--cor-texto-principal);;
+}
