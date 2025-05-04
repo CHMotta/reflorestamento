@@ -136,7 +136,6 @@ if(window.location.href.includes("/reflorestamento/destaques.html")){
     //slice serve para copiar parte da array, no caso do indice zero (0) até ANTES do ultime indece (3)
     let top3 = usuarios.slice(0, 3)
 
-    console.log(top3);
 
     top3.forEach((usuario, index) => {
         let imgUsuario = document.getElementById(`img-usuario${index + 1}`);

@@ -1,0 +1,56 @@
+#main-relatorio{
+    background-color:rgba(255, 255, 255, 0.8);
+    text-align: center;
+    width: 90%;
+    height: 450px;
+    max-width: 900px;
+    display: grid;
+    grid-template-rows: 1fr 0.5fr 3fr;
+    gap: 5px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px;
+
+}
+
+#for-buscar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#resultados-busca{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+thead{
+    border: 1px solid black;
+    padding: 10px;
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+}
+
+table{
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+th{
+    background-color: aqua;
+}
+
+tr{
+    display: flex;
+    background-color: aqua;
+    flex-direction: row;
+    border: 1px solid black;
+    padding: 10px;
+    width: 500px;
+    justify-items: center;
+    justify-content: space-around;
+}
+

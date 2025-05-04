@@ -21,6 +21,45 @@ body{
     background-size: 50%;
     height: 80vh;
     max-height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 0px;
+    background-color: #ffffff;
+    opacity: 80%;
+    width: 900px;
+    height: 40px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px;
+}
+
+li{
+    list-style: none;/*remove o tipo de marcação da lista*/
+    padding: 0;
+    font-size: 19px;
+}
+
+a{
+    color: var(--cor-texto-principal);
+    text-decoration: none; /*remove o sublinhado*/
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+a:hover{
+    border: 1px solid black;
+    border-radius: 100px;
+    padding: 4px;
+    background-color: var(--cor-texto-principal);
+    color: white;
+
 }
 
 .tema-pau-brasil{
