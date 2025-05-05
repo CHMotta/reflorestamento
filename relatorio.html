@@ -10,24 +10,17 @@
 <body>
     <nav>
         <ul>
-            <li><a href="registros.html">REGISTRO DE REFLORESTAMNETO</a></li>
+            <li><a href="registros.html">REGISTRO DE REFLORESTAMENTO</a></li>
             <li><a href="perfil.html">PERFIL</a></li>
             <li><a href="relatorio.html">RELATÓRIO</a></li>
             <li><a href="destaques.html">DESTAQUES</a></li>
         </ul>
     </nav>
     <main id="main-relatorio">
-        <h1>Buscar usuario</h1>
+        <h2>Buscar usuario</h2>
         <form id="for-buscar">
-            <label for="">
-                <p>Nome:</p>
-                <input type="text">
-            </label>
-            <label for="">
-                <p>Tipo de arvore</p>
-                <input type="text">
-            </label>
-            <button class="btn-padrao">Buscar</button>
+            <label for="input-busca-nome">Nome/Arvore:</label>
+            <input type="text" id="input-busca-nome">
         </form>
 
         <table id="resultados-busca">
@@ -38,27 +31,8 @@
                     <th>Quantidade</th>
                 </tr>
             </thead>
-                <tbody>
-                    <tr>
-                        <th id="usuario1">Carlos</th>
-                        <td id="tipo-de-arvore1">tipo de arvore</td>
-                        <td>65468</td>
-                    </tr>
-                    <tr>
-                        <th id="usuario2">Carlos</th>
-                        <td id="tipo-de-arvore2">tipo de arvore</td>
-                        <td>65468</td>
-                    </tr>
-                    <tr>
-                        <th id="usuario3">Carlos</th>
-                        <td id="tipo-de-arvore3">tipo de arvore</td>
-                        <td>65468</td>
-                    </tr>
-                    <tr>
-                        <th id="usuario4">Carlos</th>
-                        <td id="tipo-de-arvore4">tipo de arvore</td>
-                        <td>65468</td>
-                    </tr>
+                <tbody id="corpo-tabela">
+                    
                 </tbody>
         </table>
     </main>
