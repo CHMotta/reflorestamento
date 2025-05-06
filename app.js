@@ -42,7 +42,7 @@ if (btnLogin) {
         }
         console.log(JSON.stringify(usuarioObjeto));
 
-        window.location.href = "/reflorestamento/registros.html"
+        window.location.href = "registros.html"
     });
 }
 
@@ -66,10 +66,10 @@ if (btnRegistro) {
             quantArvores: quantArvores.value,
             especieReflorestada: especieReflorestada.value
         }
+        console.log(registroReflorestamento)
         let registroReflorestamentoObjeto = JSON.stringify(registroReflorestamento);
         localStorage.setItem('registros', registroReflorestamento);
-        console.log(registroReflorestamento);
-        console.log(registroReflorestamentoObjeto);
+
     })
 }
 
@@ -132,7 +132,7 @@ if (window.location.href.includes("/reflorestamento/destaques.html")) {
     //recupera localStorage em json e converte para JS
     const usuarios = JSON.parse(localStorage.getItem("usuariosDestaque"))
     //serve para organizar um item dentro dos usuarios
-    usuarios.sort((a, b) => b.quantidadePlantada - a.quantidadePlantada);
+    usuarios.sort((a, b) => b.quantidadeArvoresPlantadas - a.quantidadeArvoresPlantadas);
     //slice serve para copiar parte da array, no caso do indice zero (0) até ANTES do ultime indece (3)
     let top3 = usuarios.slice(0, 3)
 
@@ -199,9 +199,6 @@ if (window.location.href.includes("/reflorestamento/relatorio.html")) {
         let linhas = tbody.getElementsByTagName('tr');
 
         for (let posicao in linhas) {
-            if (true === isNaN(posicao)) {
-                continue;
-            }
 
             let conteudoDaLinha = linhas[posicao].innerHTML.toLowerCase();
 
@@ -211,6 +208,5 @@ if (window.location.href.includes("/reflorestamento/relatorio.html")) {
                 linhas[posicao].style.display = 'none'
             }
         }
-
     })
 }
